@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace cs_FileSystemWatcher
 {
-    class MyClassCS
+    internal class MyClassCS
     {
-        static void Main()
+        private static void Main()
         {
             var watcher = new FileSystemWatcher(@"C:\Users\fromj\Downloads");
 
@@ -64,7 +60,7 @@ namespace cs_FileSystemWatcher
         private static void OnError(object sender, ErrorEventArgs e) =>
             PrintException(e.GetException());
 
-        private static void PrintException(Exception? ex)
+        private static void PrintException(Exception ex)
         {
             if (ex != null)
             {
